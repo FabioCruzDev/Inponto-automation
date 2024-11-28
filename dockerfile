@@ -8,4 +8,4 @@ COPY . /app
 RUN pip install -r requirements.txt
 
 # Comando padrão, será sobrescrito pelo docker-compose
-CMD ["celery", "--help"]
+CMD bash -c "celery -A tasks worker --loglevel=info & celery -A tasks beat --loglevel=info"
