@@ -1,6 +1,6 @@
 import unittest
 from utils import is_weekend_or_holiday, send_whatsapp_msg
-from tasks import get_dates, periodic_task_add_point_inponto
+from inponto.tasks import get_dates, periodic_task_add_point_inponto
 from freezegun import freeze_time
 from datetime import datetime
 

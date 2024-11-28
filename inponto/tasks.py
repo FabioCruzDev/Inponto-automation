@@ -1,4 +1,4 @@
-from celery_app import app
+from inponto.celery_app import app
 from inponto.main import Inponto
 from datetime import datetime, timedelta, timezone
 from loguru import logger
