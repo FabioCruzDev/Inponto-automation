@@ -13,7 +13,7 @@ services:
   celery_worker:
     build: .
     container_name: inponto-celery_worker
-    command: celery -A tasks worker --loglevel=info
+    command: celery -A inponto.tasks worker --loglevel=info
     volumes:
       - .:/app
     working_dir: /app
@@ -28,7 +28,7 @@ services:
   celery_beat:
     build: .
     container_name: inponto-celery_beat
-    command: celery -A tasks beat --loglevel=info
+    command: celery -A inponto.tasks beat --loglevel=info
     volumes:
       - .:/app
     working_dir: /app
