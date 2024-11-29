@@ -20,7 +20,7 @@ app.conf.beat_schedule = {
     },
     'executar-18-da-tarde': {
         'task': 'inponto.tasks.periodic_task_add_point_inponto',
-        'schedule': crontab(hour=18, minute=0),  # Variação de minutos
+        'schedule': crontab(hour=17, minute=30),  # Variação de minutos
     },
 }
 
