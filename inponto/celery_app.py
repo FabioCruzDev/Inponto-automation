@@ -1,7 +1,8 @@
 from celery import Celery
 from celery.schedules import crontab
+from settings import CELERY_BROKER_URL
 
-app = Celery('tasks', broker='redis://inponto-redis:6379/0', backend='redis://inponto-redis:6379/0')
+app = Celery('tasks', broker=CELERY_BROKER_URL, backend=CELERY_BROKER_URL)
 
 app.conf.beat_schedule = {
     'executar-8-da-manha': {
