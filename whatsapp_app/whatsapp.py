@@ -1,5 +1,5 @@
 from twilio.rest import Client
-from settings import TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_PHONE_NUMBER, MY_NUMBER
+from inponto.settings import TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_PHONE_NUMBER, MY_NUMBER
 
 # Twilio dashboard : https://console.twilio.com
 class WhatsAppApi():

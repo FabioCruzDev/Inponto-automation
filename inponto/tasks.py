@@ -4,7 +4,7 @@ from datetime import datetime, timedelta, timezone
 from loguru import logger
 import random
 from utils import is_weekend_or_holiday, send_whatsapp_msg
-from settings import USER, PASSWORD
+from inponto.settings import USER, PASSWORD
 
 @app.task(bind=True, autoretry_for=(Exception,), retry_backoff=60, retry_jitter=True, retry_kwargs={'max_retries': 5})
 def periodic_task_add_point_inponto(_):
