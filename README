@@ -1,2 +1,4 @@
 celery -A tasks worker --loglevel=info
 celery -A tasks beat --loglevel=info
+
+#TODO VERIFICAR VERIADO LOCAL.
