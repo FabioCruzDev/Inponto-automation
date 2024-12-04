@@ -24,7 +24,6 @@ class Inponto():
     def get_authorization_tk(self, cookies):
         logger.info('Capturando token de autorização.')
         data = requests.get(self.authorization_tk_url, cookies=cookies)
-        from IPython import embed;embed()
 
         if data.status_code == 404:
             self.get_new_hash(data)
